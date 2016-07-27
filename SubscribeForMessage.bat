@@ -1,0 +1,2 @@
+rem windows 7
+java -cp target\classes;%USERPROFILE%\.m2\repository\org\apache\kafka\kafka-clients\0.10.0.0\kafka-clients-0.10.0.0.jar;%USERPROFILE%\.m2\repository\org\slf4j\slf4j-api\1.7.21\slf4j-api-1.7.21.jar example.SubscribeForMessage

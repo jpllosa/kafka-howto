@@ -26,6 +26,10 @@ import org.apache.kafka.clients.producer.ProducerRecord;
  */
 public class PublishMessage {
 
+	// make sure Kafka is running
+	// run SubscribeForMessage
+	// check Kafka if topic is registered, kafka-topics.bat
+	// run PublishMessage
 	public static void main(String[] args) {
 		Properties properties = new Properties();
         properties.put("bootstrap.servers", "localhost:9092");
@@ -34,7 +38,7 @@ public class PublishMessage {
         
         Producer<String, String> producer = new KafkaProducer<String, String>(properties);
         System.out.println("sending...");
-        producer.send(new ProducerRecord<String, String>("german-shepherd-mix", "https://www.youtube.com/channel/UCXcCmh1sLiq2mjkJEO4FPyA"));
+        producer.send(new ProducerRecord<String, String>("videos", "https://www.youtube.com/channel/UCXcCmh1sLiq2mjkJEO4FPyA"));
         producer.close();
         System.out.println("message sent...");
 	}
